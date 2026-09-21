@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class MenuOpcao {
 
-    Produto produto = new Produto();
     Estoque estoque = new Estoque();
     Scanner sc = new Scanner(System.in);
 
