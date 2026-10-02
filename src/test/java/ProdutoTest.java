@@ -71,4 +71,17 @@ class ProdutoTest {
         );
     }
 
+    @Test
+    void deveLancarExceptionQuandoAListaEstiverVazio() {
+
+        Estoque estoque = new Estoque();
+
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                estoque::encontrarProdutoMaisCaro
+        );
+
+        assertEquals("Lista de produtos está vazia", exception.getMessage());
+    }
+
 }

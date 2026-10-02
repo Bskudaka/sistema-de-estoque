@@ -37,6 +37,9 @@ public class Estoque {
     }
 
     public Produto encontrarProdutoMaisCaro() {
+        if (produtos.isEmpty()){
+            throw new IllegalArgumentException("Lista de produtos está vazia");
+        }
         Produto produtoMaisCaro = produtos.getFirst();
         for (int i = 1; i < produtos.size(); i++) {
             if (produtos.get(i).getPreco() > produtoMaisCaro.getPreco()) {
